@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="jQuery/jquery-3.6.0.min.js" type="text/js"></script>
+        <script src="jQuery/custom.js" type="text/js"></script>
+
+        <script>
+            $(function(){
+                $('#username').keyup(function(){
+                    var username1 = $('#username').val();
+                    var username2 = $('#username').val();
+                    var ful = username1 + username2;
+                    username = username.toUpperCase();
+                    alert(Now());
+                    $('#username').val(username);
+                });
+
+
+                $('#turn-on-off').click(function(){
+                    var currentValue = $('#turn-on-off').text();
+                    if(currentValue == 'Turn ON'){
+                        $('img').attr('src', 'images/bulb-on.jpg' );
+                        $('#turn-on-off').text('Turn OFF');
+                    }
+                    else{
+                        $('img').attr('src', 'images/bulb-off.jpg' );
+                        $('#turn-on-off').text('Turn ON');
+                    }
+                    
+                });
+
+                $('h1').click(function(){
+                    $('h1').css('color', 'red');
+                });
+            });
+        </script>
+    </head>
+</html>
+<body>
+    <img src="images/bulb-off.jpg"/>
+    <button id="turn-on-off" type="button">Turn ON</button>
+
+    <input type="text" id="username"/>
+    <h1>BSCS</h1>
+</body>
